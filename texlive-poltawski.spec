@@ -1,3 +1,9 @@
+# revision 20075
+# category Package
+# catalog-ctan /fonts/poltawski
+# catalog-date 2010-10-12 09:30:05 +0200
+# catalog-license gfsl
+# catalog-version 1.101
 Name:		texlive-poltawski
 Version:	1.101
 Release:	1
@@ -916,6 +922,7 @@ rendered obsolete by this package.
 %doc %{_texmfdistdir}/doc/fonts/poltawski/tstapt1.tex
 %doc %{_texmfdistdir}/doc/fonts/poltawski/tstapts1.pdf
 %doc %{_texmfdistdir}/doc/fonts/poltawski/tstapts1.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -926,3 +933,5 @@ rendered obsolete by this package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
