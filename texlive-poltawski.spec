@@ -6,7 +6,7 @@
 # catalog-version 1.101
 Name:		texlive-poltawski
 Version:	1.101
-Release:	9
+Release:	10
 Summary:	Antykwa Poltawskiego Family of Fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/poltawski
