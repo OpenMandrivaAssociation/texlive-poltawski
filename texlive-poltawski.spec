@@ -1,18 +1,12 @@
-# revision 20075
-# category Package
-# catalog-ctan /fonts/poltawski
-# catalog-date 2010-10-12 09:30:05 +0200
-# catalog-license gfsl
-# catalog-version 1.101
 Name:		texlive-poltawski
-Version:	1.101
-Release:	12
+Version:	20075
+Release:	1
 Summary:	Antykwa Poltawskiego Family of Fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/poltawski
 License:	GFSL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/poltawski.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/poltawski.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/poltawski.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/poltawski.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -44,12 +38,12 @@ of Antykwa Poltawskiego (antp package) released in 2000 is
 rendered obsolete by this package.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -916,24 +910,10 @@ rendered obsolete by this package.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.101-2
-+ Revision: 755006
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.101-1
-+ Revision: 719282
-- texlive-poltawski
-- texlive-poltawski
-- texlive-poltawski
-- texlive-poltawski
-
