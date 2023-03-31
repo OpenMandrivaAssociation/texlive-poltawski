@@ -1,6 +1,6 @@
 Name:		texlive-poltawski
 Version:	20075
-Release:	1
+Release:	2
 Summary:	Antykwa Poltawskiego Family of Fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/poltawski
