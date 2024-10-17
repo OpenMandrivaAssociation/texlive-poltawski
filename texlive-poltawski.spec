@@ -3,7 +3,7 @@ Version:	67718
 Release:	1
 Summary:	Antykwa Poltawskiego Family of Fonts
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/poltawski
+URL:		https://www.ctan.org/tex-archive/fonts/poltawski
 License:	GFSL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/poltawski.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/poltawski.doc.r%{version}.tar.xz
