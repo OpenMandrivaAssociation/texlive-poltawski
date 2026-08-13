@@ -1,9 +1,10 @@
 %global tl_name poltawski
 %global tl_revision 77682
+%global tl_version 1.101
 
 Name:		texlive-%{tl_name}
 Epoch:		1
-Version:	1.101
+Version:	%{tl_version}
 Release:	%{tl_revision}.1
 Summary:	Antykwa Poltawskiego Family of Fonts
 Group:		Publishing
@@ -13,7 +14,8 @@ Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/poltawski.r%{tl_
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/poltawski.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 The package contains the Antykwa Poltawskiego family of fonts in the
@@ -36,3 +38,10 @@ containing the same repertoire of 1126 characters. The preliminary
 version of Antykwa Poltawskiego (antp package) released in 2000 is
 rendered obsolete by this package.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from poltawski:
+Map ap.map
+TL_DROPIN_EOF
